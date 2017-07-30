@@ -2,7 +2,7 @@
 # // Script to auto reboot rigs with stuck_miners condition
 
 <?php
-        $ethosurl = "http://hashr9.ethosdistro.com/?json=yes";
+        $ethosurl = "http://embria.ethosdistro.com/?json=yes";
         $json6 = file_get_contents($ethosurl);
         $ethosjson = json_decode($json6);
 
