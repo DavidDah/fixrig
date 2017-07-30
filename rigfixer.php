@@ -38,8 +38,8 @@
                 exec("timeout 30 sshpass -f /root/gpurigs/gpupass.txt ssh -oStrictHostKeyChecking=no -oConnectTimeout=3 -l root {$k->ip} 'clear-thermals && shutdown -r now'", $output);
                 echo '';
             } elseif($k->condition == "no_hash") {
-                echo 'Attempting to re-parse hashrate speeds from ', $rig_id, ' because they didnt show up last time', PHP_EOL;
-                exec("timeout 30 sshpass -f /root/gpurigs/gpupass.txt ssh -oStrictHostKeyChecking=no -oConnectTimeout=3 -l root {$k->ip} 'update'", $output);
+                echo 'reboot ', $rig_id, ' because it has a GPU issue', PHP_EOL;
+                exec("timeout 30 sshpass -f /root/gpurigs/gpupass.txt ssh -oStrictHostKeyChecking=no -oConnectTimeout=3 -l root {$k->ip} 'reboot'", $output);
                 echo '';
             }
 
